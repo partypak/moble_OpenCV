@@ -1,2 +1,2 @@
 # moble_OpenCV
-OpenCV Study
+OpenCV Study - 아이고
