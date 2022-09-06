@@ -4,9 +4,9 @@ from   matplotlib import pyplot as plt
 
 path = './data/'
 imgBGR1 = cv2.imread(path+'lena.jpg')
-imgBGR2 = cv2.imread(path+'apple.jpg')
-imgBGR3 = cv2.imread(path+'baboon.jpg')
-imgBGR4 = cv2.imread(path+'orange.jpg')
+imgBGR2 = cv2.imread(path+'lena.jpg')
+imgBGR3 = cv2.imread(path+'lena.jpg')
+imgBGR4 = cv2.imread(path+'lena.jpg')
 
 imgRGB1 = cv2.cvtColor(imgBGR1, cv2.COLOR_BGR2RGB)
 imgRGB2 = cv2.cvtColor(imgBGR2, cv2.COLOR_BGR2RGB)

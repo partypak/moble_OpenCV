@@ -7,7 +7,7 @@ x, y, R = 256, 256, 50
 direction = 0 # right
 
 while True:   
-    key = cv2.waitKeyEx(30)    
+    key = cv2.waitKeyEx(10)    
     if key == 0x1B: 
         break;
     
@@ -23,13 +23,13 @@ while True:
         
 # 방향으로 이동 
     if direction == 0:     # right
-        x += 10
+        x += 20
     elif direction == 1:   # down
-        y += 10
+        y += 20
     elif direction == 2:   # left
-        x -= 10
+        x -= 20
     else: # 3, up
-        y -= 10
+        y -= 20
         
 #   경계확인 
     if x < R:
@@ -46,8 +46,10 @@ while True:
         direction = 3
         
 # 지우고, 그리기        
-    img = np.zeros((width, height,3), np.uint8) + 255 # 지우기
-    cv2.circle(img, (x, y), R, (0, 0, 255), -1) 
+    #img = np.zeros((width, height,3), np.uint8) + 255 # 지우기
+    imageFile = './data/lena.jpg'
+    img  = cv2.imread(imageFile)
+    cv2.circle(img, (x, y), R, (0, 0, 255), 1) 
     cv2.imshow('img', img)
     
 cv2.destroyAllWindows()

@@ -2,7 +2,7 @@
 import cv2
 import numpy as np
 
-img = np.zeros(shape=(512,512,3), dtype=np.uint8) + 255
+img = np.zeros(shape=(512,512,3), dtype=np.uint8) #+ 255
 cy = img.shape[0]//2
 cx = img.shape[1]//2
 
