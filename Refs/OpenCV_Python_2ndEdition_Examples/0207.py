@@ -23,7 +23,7 @@ while True:
     
     lena =cv2.resize(lena,(640,480))
     frame =cv2.resize(frame,(640,480))
-    text = 'OpenCV Programming'
+    text = 'Hello'
     org = (100,470)
     font = cv2.FONT_HERSHEY_SIMPLEX
     cv2.putText(frame,text, org, font, 1, (255,0,0), 2)
