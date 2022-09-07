@@ -10,7 +10,7 @@ print(img[100, 200:210]) # ROI 접근
 ##    for x in range(200, 300):
 ##        img[y, x] = [255, 0, 0]    # 파랑색(blue)으로 변경
 
-img[100:400, 200:300] = [255, 0, 0]  # ROI 접근
+img[100:400, 200:300] = [255, 255, 255]  # ROI 접근
     
 cv2.imshow('img', img)
 cv2.waitKey()
