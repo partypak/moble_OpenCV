@@ -1,7 +1,8 @@
 # 0210.py
 import cv2
+import numpy as np
 
-cap = cv2.VideoCapture('./data/vtest.avi') # 0번 카메라
+cap = cv2.VideoCapture('./data/live.mp4') # 0번 카메라
 frame_size = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),
               int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))
 print('frame_size =', frame_size)
@@ -19,7 +20,11 @@ while True:
     out1.write(frame)
     
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    out2.write(gray)        
+    out2.write(gray) 
+    _, gray = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY)
+   
+    gray = cv2.Canny(gray, 50, 200, None, 3)
+    cv2.imshow('Image - binary & edge', gray)       
     cv2.imshow('frame',frame)
     cv2.imshow('gray',gray)      
     
